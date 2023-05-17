@@ -1,3 +1,3 @@
-test('shoult conteiner one', () => {
+it('shoult conteiner one', () => {
   expect(1).toBe(1);
 });
