@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { fireEvent, screen } from '@testing-library/react';
 import { Input } from '.';
 import { renderTheme } from '../../utils/renderTheme';
