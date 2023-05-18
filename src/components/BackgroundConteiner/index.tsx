@@ -7,6 +7,6 @@ export type BackgroundConteinerProps = {
 
 export const BackgroundConteiner = ({ img, children }: BackgroundConteinerProps) => {
   return (
-    <S.Conteiner img={img}>{children}</S.Conteiner>
+    <S.Conteiner img={img} >{children}</S.Conteiner>
   );
 };
