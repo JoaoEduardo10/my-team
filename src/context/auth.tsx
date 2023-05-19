@@ -8,11 +8,14 @@ type AuthProviderProps = {
 type AuthContextProps = {
   key: string
   singed: boolean
-  signIn?: (api_key: string) => Promise<boolean>
+  signIn: (api_key: string) => Promise<boolean>
 }
 
+const mockSinIn = async (key: string) => {
+  return Promise.resolve(true);
+};
 
-export const AuthContext = createContext<AuthContextProps>({ key: '', singed: false });
+export const AuthContext = createContext<AuthContextProps>({ key: '', singed: false, signIn: mockSinIn });
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {
   const [key, setKey] = useState('');
@@ -35,7 +38,6 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
       const data = await authUser(api_key);
 
       if(data.errors.token == 'Error/Missing application key. Go to https://www.api-football.com/documentation-v3 to learn how to get your API application key.') {
-
         return ;
       }
 

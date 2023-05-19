@@ -9,7 +9,6 @@ const authUser = async (key: string) => {
       },
       redirect: 'follow'
     });
-
     const data = await response.json();
 
     return data;

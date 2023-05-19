@@ -18,9 +18,9 @@ export const Login = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    if(key) {
-      navegate('/');
-    }
+
+    navegate('/');
+
   }, [key]);
 
   useEffect(() => {
@@ -43,8 +43,6 @@ export const Login = () => {
       return;
     }
 
-    if(!signIn) return;
-
     setLoading(true);
     const response = await signIn(valueKey);
     setLoading(false);
@@ -54,9 +52,8 @@ export const Login = () => {
       setErrorMessage('Api-Key invalido!');
     }
 
-    if(singed) {
-      navegate('/');
-    }
+    navegate('/');
+
 
   };
 
