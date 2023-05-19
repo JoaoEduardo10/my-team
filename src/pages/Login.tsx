@@ -1,3 +1,5 @@
+import { Login as FormLogin } from '../components/login';
+
 export const Login = () => {
-  return <h1>Login</h1>;
+  return <FormLogin />;
 };
