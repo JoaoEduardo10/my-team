@@ -1,11 +1,11 @@
 import { createBrowserRouter } from 'react-router-dom';
-import { Home } from '../pages/Home';
 import { Login } from '../pages/Login';
+import { PriviteRouter } from './priviteRoute';
 
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home />
+    element:  <PriviteRouter />
   },
   {
     path: '/login',
