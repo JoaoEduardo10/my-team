@@ -1,6 +1,5 @@
 /* eslint-disable semi */
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { act, fireEvent, screen, waitFor } from '@testing-library/react';
+import { act, fireEvent, screen } from '@testing-library/react';
 import { Login } from '.';
 import { renderTheme } from '../../utils/renderTheme';
 import { afterEach, beforeEach, vi } from 'vitest';

@@ -7,5 +7,6 @@ import { Home } from '../pages/Home';
 export const PriviteRouter = () => {
   const { singed } = useContext(AuthContext);
 
+
   return singed ? <Home /> : <Navigate to={'/login'} />;
 };

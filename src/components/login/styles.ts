@@ -24,6 +24,7 @@ export const Form = styled.form`
 
     ${Loading} {
       border-radius: 6rem;
+      z-index: 4;
     }
 
     ${Button} {

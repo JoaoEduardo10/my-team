@@ -3,7 +3,7 @@ import * as Styled from './styles';
 import { BackgroundConteiner } from '../BackgroundConteiner';
 import { Input } from '../input';
 import img from '../../../public/images/background-login.jpg';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/auth';
 import { ErrorMessage } from '../ErrorMessage';
 import { Loading } from '../Loading';
@@ -11,17 +11,11 @@ import { Button } from '../Button';
 
 export const Login = () => {
   const navegate = useNavigate();
-  const { signIn, singed, key } = useContext(AuthContext);
+  const { signIn, key, singed } = useContext(AuthContext);
   const [valueKey, setValueKey] = useState('');
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
   const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-
-    navegate('/');
-
-  }, [key]);
 
   useEffect(() => {
     const time = setTimeout(() => {
@@ -51,11 +45,11 @@ export const Login = () => {
       setError(true);
       setErrorMessage('Api-Key invalido!');
     }
-
-    navegate('/');
-
-
   };
+
+  if(singed) {
+    return <Navigate to={'/'} />;
+  }
 
   return (
     <BackgroundConteiner img={img}>
