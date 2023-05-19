@@ -1,4 +1,4 @@
-import * as S from './styles';
+import * as Styled from './styles';
 
 export type BackgroundConteinerProps = {
   img?: string
@@ -7,6 +7,6 @@ export type BackgroundConteinerProps = {
 
 export const BackgroundConteiner = ({ img, children }: BackgroundConteinerProps) => {
   return (
-    <S.Conteiner img={img} >{children}</S.Conteiner>
+    <Styled.Conteiner img={img} >{children}</Styled.Conteiner>
   );
 };
