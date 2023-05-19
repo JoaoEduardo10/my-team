@@ -28,9 +28,9 @@ describe('<Login />', () => {
     vi.resetAllMocks();
   });
 
-  it('should a render Login compomnent', () => {
+  it('should a render Login compomnent', async () => {
 
-    renderTheme(<Login />);
+    await act(async () => renderTheme(<Login />))
 
     const form = screen.getByRole('form');
     const heading = screen.getByRole('heading', { name: 'Login De Usuario'});
@@ -49,13 +49,13 @@ describe('<Login />', () => {
     expect(loading).not.toBeInTheDocument();
   });
 
-  it('should show an error message for not adding a key', () => {
+  it('should show an error message for not adding a key', async () => {
 
-    renderTheme(<Login />);
+    await act(async () => renderTheme(<Login />))
 
     const button = screen.getByRole('button', { name: 'Entrar' });
 
-    expect(button).toBeInTheDocument();
+    expect(button).toBeInTheDocument()
 
     fireEvent.click(button);
 
@@ -71,19 +71,40 @@ describe('<Login />', () => {
 
   });
 
-  it('should return valide key', async () => {
+  it('should return an error for sending an invalid key', async () => {
 
-    renderTheme(<Login />);
+    await act( async() => renderTheme(<Login />))
 
-    const button = screen.getByRole('button', { name: 'Entrar' });
     const input = screen.getByPlaceholderText('Api Key');
-
-    expect(button).toBeInTheDocument();
-    expect(input).toBeInTheDocument();
 
     fireEvent.change(input, { target: { value: 'test' } });
 
-    fireEvent.click(button);
+    await act(async () => {
+      fireEvent.submit(screen.getByRole('form'));
+    });
 
+    const errorMessage = screen.getByRole('alert')
+
+    expect(errorMessage).toBeInTheDocument()
+    expect(screen.getByRole('log')).toHaveTextContent('Api-Key invalido!')
+
+  });
+
+  it('should login', async () => {
+    global.fetch = vi.fn().mockReturnValue({
+      ok: true,
+      json: () =>
+        Promise.resolve({ errors: { token: 'passou' } }),
+    });
+
+    await act( async() => renderTheme(<Login />))
+
+    const input = screen.getByPlaceholderText('Api Key');
+
+    fireEvent.change(input, { target: { value: 'test' } });
+
+    await act(async () => {
+      fireEvent.submit(screen.getByRole('form'))
+    });
   });
 });

@@ -3,15 +3,14 @@ import * as Styled from './styles';
 import { BackgroundConteiner } from '../BackgroundConteiner';
 import { Input } from '../input';
 import img from '../../../public/images/background-login.jpg';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { AuthContext } from '../../context/auth';
 import { ErrorMessage } from '../ErrorMessage';
 import { Loading } from '../Loading';
 import { Button } from '../Button';
 
 export const Login = () => {
-  const navegate = useNavigate();
-  const { signIn, key, singed } = useContext(AuthContext);
+  const { signIn, singed } = useContext(AuthContext);
   const [valueKey, setValueKey] = useState('');
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
@@ -40,6 +39,7 @@ export const Login = () => {
     setLoading(true);
     const response = await signIn(valueKey);
     setLoading(false);
+
 
     if(!response) {
       setError(true);
