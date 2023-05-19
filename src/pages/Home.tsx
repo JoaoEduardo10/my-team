@@ -1,5 +1,7 @@
+import { Template } from '../template';
+
 export const Home = () => {
-  return <div>Hello Word</div>;
+  return <Template />;
 };
 
 
