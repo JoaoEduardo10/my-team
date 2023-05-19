@@ -5,8 +5,6 @@ import { beforeAll, vi } from 'vitest'
 
 const mockRequest = vi.fn();
 
-
-
 afterAll(() => {
   global.Request = mockRequest ;
 });
