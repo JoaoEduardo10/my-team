@@ -10,13 +10,14 @@ type AuthContextProps = {
   key: string
   singed: boolean
   signIn: (api_key: string) => Promise<boolean>
+  signOut: () => void
 }
 
 const mockSinIn = async (_key: string) => {
   return Promise.resolve(true);
 };
 
-export const AuthContext = createContext<AuthContextProps>({ key: '', singed: false, signIn: mockSinIn });
+export const AuthContext = createContext<AuthContextProps>({ key: '', singed: false, signIn: mockSinIn, signOut: () => {'aaa';} });
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {
   const [key, setKey] = useState('');
@@ -51,8 +52,13 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     return true;
   };
 
+  const signOut = () => {
+    setKey('');
+    localStorage.clear();
+  };
+
   return (
-    <AuthContext.Provider value={{ key, singed: !!key, signIn }}>
+    <AuthContext.Provider value={{ key, singed: !!key, signIn, signOut }}>
       { children }
     </AuthContext.Provider>
   );
