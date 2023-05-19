@@ -16,7 +16,7 @@ export const Label = styled.label`
     top: 0;
     display: block;
     transition: 0.2s;
-    font-size: 2.8rem;
+    font-size: 1.6rem;
     color: ${theme.colors.gray};
   `}
 `;
@@ -29,7 +29,7 @@ export const Input = styled.input`
   border-bottom: .2rem solid ${theme.colors.gray};
   outline: 0;
   font-size: 1.6rem;
-  color: ${theme.colors.white};
+  color: ${theme.colors.black};
   padding: .7rem 0;
   padding-left: 0.3rem;
   background: transparent;
