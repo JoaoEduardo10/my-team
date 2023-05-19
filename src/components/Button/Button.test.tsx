@@ -35,7 +35,7 @@ describe('<Button />', () => {
 
     expect(button).toMatchInlineSnapshot(`
       <button
-        class="dTJCgP"
+        class="gWAGfQ"
       >
         test
       </button>

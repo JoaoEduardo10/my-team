@@ -1,0 +1,34 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Header /> > should match snapshot 1`] = `
+<header
+  class="fnMAPG"
+>
+  <div
+    class="hjMEdp"
+  >
+    <div
+      class="icrFid"
+    >
+      <img
+        alt="logo"
+        src="/public/images/logo.png"
+      />
+    </div>
+    <h1
+      class="csSgVV"
+    >
+      Meu Time
+    </h1>
+  </div>
+  <div
+    class="hjMEdp"
+  >
+    <button
+      class="gWAGfQ"
+    >
+      Sair
+    </button>
+  </div>
+</header>
+`;
