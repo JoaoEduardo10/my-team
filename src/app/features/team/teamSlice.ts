@@ -6,20 +6,20 @@ export const teamSlice = createSlice({
   name: 'team',
   initialState,
   reducers: {
-    setTeam: (state, action: PayloadAction<{ team: string }>) => {
-      if(action.type == 'country') {
+    setTeam: (state, action: PayloadAction<{ team: string, type: string }>) => {
+      if(action.payload.type == 'country') {
         state.country = action.payload.team;
       }
 
-      if(action.type == 'season') {
+      if(action.payload.type == 'season') {
         state.season = action.payload.team;
       }
 
-      if(action.type == 'league') {
+      if(action.payload.type == 'league') {
         state.league = action.payload.team;
       }
 
-      if(action.type == 'team') {
+      if(action.payload.type == 'team') {
         state.team = action.payload.team;
       }
     },
