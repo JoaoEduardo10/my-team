@@ -21,6 +21,8 @@ module.exports = {
     'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
-    'react/react-in-jsx-scope': 'off'
+    'react/react-in-jsx-scope': 'off',
+    'prefer-const': 'off',
+    '@typescript-eslint/no-explicit-any': 'off'
   },
 };
