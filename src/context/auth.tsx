@@ -12,11 +12,11 @@ type AuthContextProps = {
   signIn: (api_key: string) => Promise<boolean>
   signOut: () => void
 }
-
+/* c8 ignore start */
 const mockSinIn = async (_key: string) => {
   return Promise.resolve(true);
 };
-
+/* c8 ignore stop */
 export const AuthContext = createContext<AuthContextProps>({ key: '', singed: false, signIn: mockSinIn, signOut: () => {'aaa';} });
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {

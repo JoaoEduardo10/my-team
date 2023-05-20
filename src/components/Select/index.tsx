@@ -21,7 +21,7 @@ export const Select = ({ arrey, type, value, onChange, loading }: SelectProps) =
     const countries = arrey as TCountrys['response'];
 
     return (
-      <Styled.Select onChange={handleChange} value={value}>
+      <Styled.Select role='listbox'  onChange={handleChange} value={value}>
         <Styled.Option disabled value="" role='alert'>
           {
             loading ? 'carregando...' : 'Selecione um Pais'
@@ -42,7 +42,7 @@ export const Select = ({ arrey, type, value, onChange, loading }: SelectProps) =
     const countries = arrey as TLeagues['response'];
 
     return (
-      <Styled.Select onChange={handleChange} value={value}>
+      <Styled.Select role='listbox'  onChange={handleChange} value={value}>
         <Styled.Option disabled value="" role='alert'>
           {
             loading ? 'carregando...' : 'Selecione uma liga'
@@ -63,7 +63,7 @@ export const Select = ({ arrey, type, value, onChange, loading }: SelectProps) =
     const countries = arrey as number[];
 
     return (
-      <Styled.Select onChange={handleChange} value={value}>
+      <Styled.Select role='listbox' onChange={handleChange} value={value}>
         <Styled.Option disabled value="" role='alert'>
           {
             loading ? 'carregando...' : 'Selecione uma temporada'
