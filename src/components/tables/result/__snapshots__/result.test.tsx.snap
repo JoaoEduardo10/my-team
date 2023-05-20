@@ -1,0 +1,86 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Result /> > should match snapshot 1`] = `
+<div
+  class="eEWGTn"
+>
+  <h3
+    class="pCbkN"
+  >
+    Infomações De Partidas
+  </h3>
+  <table
+    class="eceUpH"
+    role="table"
+  >
+    <thead
+      aria-label="Titulos da tabela"
+      class="kpeZfO"
+    >
+      <tr
+        class="hzbqHX"
+      >
+        <th
+          class="jGFehp"
+        >
+          Formação mais utilizada
+        </th>
+        <th
+          class="jGFehp"
+        >
+          Vitórias
+        </th>
+        <th
+          class="jGFehp"
+        >
+          Derrotas
+        </th>
+        <th
+          class="jGFehp"
+        >
+          Empates
+        </th>
+        <th
+          class="jGFehp"
+        >
+          Total
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      aria-label="Textos da tabela"
+      class="jIxYLu"
+    >
+      <tr
+        class="hzbqHX"
+      >
+        <td
+          class="kSUMkB"
+        >
+          4-5-2
+        </td>
+        <td
+          class="kSUMkB"
+        >
+          6
+        </td>
+        <td
+          class="kSUMkB"
+        >
+          5
+        </td>
+        <td
+          class="kSUMkB"
+        >
+          8
+        </td>
+        <td
+          class="kSUMkB"
+        >
+          29
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
