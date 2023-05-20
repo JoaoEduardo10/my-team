@@ -1,0 +1,126 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Players /> > should match snapshort 1`] = `
+<div
+  class="ewBUVk"
+>
+  <h3
+    class="gIwlCh"
+  >
+    Jogadores
+  </h3>
+  <table
+    class="iHGiYk"
+    role="table"
+  >
+    <thead
+      aria-label="Cabeçalho"
+      class="dDYtZq"
+    >
+      <tr
+        class="hzbqHX"
+      >
+        <th
+          class="czTZEm"
+        >
+          Nome
+        </th>
+        <th
+          class="czTZEm"
+        >
+          Idade
+        </th>
+        <th
+          class="czTZEm"
+        >
+          Nacionalidade
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="fGRXlB"
+    >
+      <tr
+        aria-label="Dados dos jogadores"
+        class="hzbqHX"
+      >
+        <td
+          class="cicZYJ"
+        >
+          eduardo
+        </td>
+        <td
+          class="cicZYJ"
+        >
+          18
+        </td>
+        <td
+          class="cicZYJ"
+        >
+          brasileiro
+        </td>
+      </tr>
+      <tr
+        aria-label="Dados dos jogadores"
+        class="hzbqHX"
+      >
+        <td
+          class="cicZYJ"
+        >
+          felipe
+        </td>
+        <td
+          class="cicZYJ"
+        >
+          20
+        </td>
+        <td
+          class="cicZYJ"
+        >
+          brasileiro
+        </td>
+      </tr>
+      <tr
+        aria-label="Dados dos jogadores"
+        class="hzbqHX"
+      >
+        <td
+          class="cicZYJ"
+        >
+          caio
+        </td>
+        <td
+          class="cicZYJ"
+        >
+          20
+        </td>
+        <td
+          class="cicZYJ"
+        >
+          brasileiro
+        </td>
+      </tr>
+      <tr
+        aria-label="Dados dos jogadores"
+        class="hzbqHX"
+      >
+        <td
+          class="cicZYJ"
+        >
+          renato
+        </td>
+        <td
+          class="cicZYJ"
+        >
+          30
+        </td>
+        <td
+          class="cicZYJ"
+        >
+          brasileiro
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
