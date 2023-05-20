@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Select /> > should to match snapshort 1`] = `
+<select
+  class="fcDRZf"
+  role="listbox"
+>
+  <option
+    class="cvjFPq"
+    disabled=""
+    role="alert"
+    value=""
+  >
+    Selecione um time
+  </option>
+  <option
+    aria-label="Lista De Times"
+    class="cvjFPq"
+    value="1"
+  >
+    barça
+  </option>
+</select>
+`;
