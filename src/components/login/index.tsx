@@ -67,7 +67,7 @@ export const Login = () => {
           />
         </Styled.ConteinerInput>
         <Button text='Entrar' />
-        <a href="https://api-sports.io/documentation/basketball/v1" target="_blank" rel="external noreferrer">Adiquira a sua chave Key aque!</a>
+        <a href="https://www.api-football.com/documentation-v3" target="_blank" rel="external noreferrer">Adiquira a sua chave Key aque!</a>
       </Styled.Form>
     </BackgroundConteiner>
   );
