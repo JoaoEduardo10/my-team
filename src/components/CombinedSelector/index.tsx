@@ -46,7 +46,7 @@ export const CombinedSelector = () => {
   }, [country, season]);
 
   useEffect(() => {
-    if(league && season) {
+    if(league && season && country) {
       const resquet = async  () => {
         setLoading(true);
         const data = await getTeam(token, Number(season), Number(league));
@@ -57,7 +57,7 @@ export const CombinedSelector = () => {
 
       resquet();
     }
-  }, [league, season]);
+  }, [league, season, country]);
 
   const handleChangeCountry = (value: string) => {
     dispatch(setTeam({team: value, type: 'country' }));
