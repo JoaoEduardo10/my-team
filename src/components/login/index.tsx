@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from 'react';
 import * as Styled from './styles';
 import { BackgroundConteiner } from '../BackgroundConteiner';
 import { Input } from '../input';
-import img from '../../../public/images/background-login.jpg';
+import img from '../../images/background-login.jpg';
 import { Navigate } from 'react-router-dom';
 import { AuthContext } from '../../context/auth';
 import { ErrorMessage } from '../ErrorMessage';

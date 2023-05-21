@@ -1,5 +1,5 @@
 import * as Styled from './styles';
-import logo from '../../../public/images/logo.png';
+import logo from '../../images/logo.png';
 import { Button } from '../Button';
 import { useContext } from 'react';
 import { AuthContext } from '../../context/auth';

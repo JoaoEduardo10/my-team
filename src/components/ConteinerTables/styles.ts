@@ -8,6 +8,8 @@ export const Conteiner = styled.section`
     gap: 1rem;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 
     ${Loading} {
       position: fixed;
