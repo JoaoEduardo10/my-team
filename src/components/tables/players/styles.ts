@@ -7,7 +7,6 @@ export const Conteiner = styled.div`
     padding: ${theme.padding.small};
     height: 40rem;
     width: 50rem;
-    overflow: auto;
     border-radius: 0.5rem;
   `}
 `;
@@ -36,6 +35,7 @@ export const Table = styled.table`
     width: 100%;
     height: 15%;
     border: 0.1rem solid #222;
+    overflow: auto;
   `}
 `;
 

@@ -10,7 +10,7 @@ export const Players = ({ players }: PlayersProps) => {
     <Styled.Conteiner>
       <Styled.Heading>Jogadores</Styled.Heading>
       {
-        players.length > 0 ? (
+        players && players?.length > 0 ? (
           <Styled.Table role='table'>
             <Styled.THead aria-label='Cabeçalho'>
               <Styled.Tr>
