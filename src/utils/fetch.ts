@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { TCountrys, TLeagues, TTeam } from '../types';
+import { TCountrys, TLeagues, TPlayers, TTeam, TTeamStatistic } from '../types';
 
 const url = import.meta.env.VITE_URL_API as string;
 
@@ -75,5 +75,33 @@ const getTeam = async (key: string, season: number, league: number) => {
   return data;
 };
 
+const getPlayers = async (key: string, season: number, league: number, team: number) => {
+  const response = await fetch(`${url}/players?season=${season}&league=${league}&team=${team}`, {
+    method: 'GET',
+    headers: {
+      'x-rapidapi-key': key,
+      'X-RapidAPI-Host': 'v3.football.api-sports.io'
+    },
+    redirect: 'follow'
+  });
+  const data: TPlayers = await response.json();
 
-export { authUser, getCountry, getLeague, getSeason, getTeam };
+  return data;
+};
+
+const getTeamStatistic = async (key: string, season: number, league: number, team: number) => {
+  const response = await fetch(`${url}/teams/statistics?league=${league}&team=${team}&season=${season}`, {
+    method: 'GET',
+    headers: {
+      'x-rapidapi-key': key,
+      'X-RapidAPI-Host': 'v3.football.api-sports.io'
+    },
+    redirect: 'follow'
+  });
+  const data: TTeamStatistic = await response.json();
+
+  return data;
+};
+
+
+export { authUser, getCountry, getLeague, getSeason, getTeam, getPlayers, getTeamStatistic };
