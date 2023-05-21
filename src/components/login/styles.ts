@@ -33,7 +33,9 @@ export const Form = styled.form`
 
     ${theme.media_screen_size.phone} {
       height: 90%;
-      justify-content: start;
+      width: 90%;
+      justify-content: center;
+      padding-top: 0;
     }
 
     a {
@@ -73,7 +75,7 @@ export const ConteinerInput = styled.div`
     }
 
     ${theme.media_screen_size.phone} {
-      width: 90%;
+      width: 98%;
 
       ${Input} {
         width: 100%;

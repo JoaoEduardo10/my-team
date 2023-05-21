@@ -13,5 +13,6 @@ html {
 
 body {
   font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
 `;
