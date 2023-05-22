@@ -29,6 +29,11 @@ export const ConteinerSelect = styled.div`
     ${theme.media_screen_size.phone} {
       padding: 0;
     }
+
+    ${theme.media_screen_size.tablet} {
+      padding: 0;
+      gap: .5rem;
+    }
   `}
 `;
 

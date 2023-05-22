@@ -8,6 +8,7 @@ export const Conteiner = styled.div`
     height: 40rem;
     width: 50rem;
     border-radius: 0.5rem;
+    overflow: auto;
   `}
 `;
 
@@ -35,7 +36,7 @@ export const Table = styled.table`
     width: 100%;
     height: 15%;
     border: 0.1rem solid #222;
-    overflow: auto;
+
   `}
 `;
 

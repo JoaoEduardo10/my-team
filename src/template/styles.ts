@@ -12,5 +12,9 @@ export const Conteiner = styled.div<{ img: string }>`
     ${theme.media_screen_size.tablet} {
       height: 110vh;
     }
+
+    ${theme.media_screen_size.lapTop} {
+      height: 110%;
+    }
   `}
 `;

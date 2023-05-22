@@ -6,12 +6,13 @@ export type PlayersProps = {
 }
 
 export const Players = ({ players }: PlayersProps) => {
+
   return (
     <Styled.Conteiner>
       <Styled.Heading>Jogadores</Styled.Heading>
-      {
-        players && players?.length > 0 ? (
-          <Styled.Table role='table'>
+      <>
+        {
+          players && players?.length > 0 && <Styled.Table role='table'>
             <Styled.THead aria-label='Cabeçalho'>
               <Styled.Tr>
                 <Styled.Th>Nome</Styled.Th>
@@ -31,10 +32,11 @@ export const Players = ({ players }: PlayersProps) => {
               }
             </Styled.TBody>
           </Styled.Table>
-        ) : (
-          <Styled.Loading aria-label='alert'>Selecione um Time</Styled.Loading>
-        )
-      }
+        }
+        {
+          players?.length <= 0 && <Styled.Loading aria-label='alert'>Selecione um Time</Styled.Loading>
+        }
+      </>
     </Styled.Conteiner>
   );
 };
